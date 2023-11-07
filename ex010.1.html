@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <h1>Nacionalidade</h1>
+    digita o número 1 se sua nacionalidade for brasileira: <input type="number" name="bravel" id="bravel"> Km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+    
+    <script>
+        function calcular() {
+            var brav = window.document.querySelector('input#bravel')
+            var res = window.document.querySelector('div#res')
+            var vel= Number(brav.value)
+            res.innerHTML = `<p>você digitou número ${vel}!</p>`
+            if (vel == 1) {
+                res.innerHTML += `<p>você nasceu no brasil!</p>`
+            }
+            res.innerHTML += `<p>Os brasileiros são as melhores pessoas!</p>`
+        }
+</script>    
+</body>
+</html>
